@@ -14,3 +14,7 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Vitae specific ignores
+assets/placeholders*
+general/user_stats.gd
