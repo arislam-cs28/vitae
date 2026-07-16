@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://qoefq1jju8t"]
+
+[ext_resource type="Script" uid="uid://cag35g5h253s6" path="res://reusables/config_button.gd" id="1_03v0f"]
+[ext_resource type="Script" uid="uid://b7v1v333ouy3h" path="res://user/options.gd" id="1_fwo0k"]
+
+[node name="Options" type="Control" unique_id=355271672]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fwo0k")
+
+[node name="Background" type="Panel" parent="." unique_id=1767727739]
+layout_mode = 0
+offset_right = 1300.0
+offset_bottom = 800.0
+
+[node name="Label" type="Label" parent="." unique_id=275902785]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 336.0
+offset_right = 789.0
+offset_bottom = 359.0
+text = "yo this is the settings section wassup"
+
+[node name="Return" type="Button" parent="." unique_id=1783804109]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 600.0
+offset_right = 694.0
+offset_bottom = 631.0
+text = "retunr to home screen
+"
+script = ExtResource("1_03v0f")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
