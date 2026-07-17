@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bqkd5u51itpy1" path="res://reusables/audio_config.gd" id="1_cre7a"]
 [ext_resource type="AudioStream" uid="uid://bgf7fo2nmqjny" path="res://assets/sfx/click.mp3" id="2_bavg8"]
 [ext_resource type="AudioStream" uid="uid://rh3fu5phjhuc" path="res://assets/sfx/vitae_bgm.mp3" id="3_w3dcq"]
-[ext_resource type="Script" uid="uid://xk0gr3djmim2" path="res://reusables/bgm.gd" id="4_8o82i"]
 
 [node name="AudioConfig" type="Node" unique_id=897902486]
 
@@ -15,4 +14,3 @@ script = ExtResource("1_cre7a")
 [node name="BGM" type="AudioStreamPlayer2D" parent="." unique_id=1512354916]
 stream = ExtResource("3_w3dcq")
 autoplay = true
-script = ExtResource("4_8o82i")

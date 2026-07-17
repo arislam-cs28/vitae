@@ -5,7 +5,7 @@ func _ready() -> void:
 	get_tree().node_added.connect(_on_node_added)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_node_added(node: Node):

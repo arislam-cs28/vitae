@@ -56,7 +56,8 @@ offset_left = 56.0
 offset_top = 64.0
 offset_right = 218.0
 offset_bottom = 137.0
-theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_color = Color(0.24533333, 0, 0.46, 0.87058824)
+theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 0.3882353)
 theme_override_font_sizes/font_size = 50
 text = "Profile"
 
@@ -80,7 +81,8 @@ offset_left = 104.0
 offset_top = 58.0
 offset_right = 297.0
 offset_bottom = 298.0
-theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_color = Color(0.24533333, 0, 0.46, 0.87058824)
+theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 0.3882353)
 theme_override_constants/line_spacing = 0
 theme_override_font_sizes/font_size = 55
 text = "My
@@ -108,7 +110,8 @@ offset_left = 110.0
 offset_top = 56.0
 offset_right = 450.0
 offset_bottom = 202.0
-theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_color = Color(0.24533333, 0, 0.46, 0.87058824)
+theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 0.3882353)
 theme_override_constants/line_spacing = 0
 theme_override_font_sizes/font_size = 50
 text = "Catch Up With
@@ -135,7 +138,8 @@ offset_left = 144.0
 offset_top = 94.0
 offset_right = 322.0
 offset_bottom = 167.0
-theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_color = Color(0.24533333, 0, 0.46, 0.87058824)
+theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 0.3882353)
 theme_override_font_sizes/font_size = 50
 text = "Options"
 
@@ -159,7 +163,8 @@ offset_left = 80.0
 offset_top = 72.0
 offset_right = 306.0
 offset_bottom = 145.0
-theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_color = Color(0.24533333, 0, 0.46, 0.87058824)
+theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 0.3882353)
 theme_override_font_sizes/font_size = 50
 text = "Resources"
 
@@ -184,7 +189,8 @@ offset_top = 48.0
 offset_right = 446.0
 offset_bottom = 121.0
 theme = ExtResource("16_rai0l")
-theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_color = Color(0.24533333, 0, 0.46, 0.87058824)
+theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 0.3882353)
 theme_override_font_sizes/font_size = 50
 text = "Quickstart Guide"
 
@@ -208,12 +214,31 @@ offset_left = 56.0
 offset_top = 48.0
 offset_right = 327.0
 offset_bottom = 195.0
-theme_override_colors/font_color = Color(0.12437331, 0.010636174, 0.3060821, 1)
+theme_override_colors/font_color = Color(0.24533333, 0, 0.46, 0.87058824)
+theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 0.3882353)
 theme_override_constants/line_spacing = 0
 theme_override_font_sizes/font_size = 50
 text = "Experiment
 With Vitae!"
 horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1242889707]
+layout_mode = 0
+offset_left = 416.0
+offset_right = 1084.0
+offset_bottom = 212.0
+theme_override_colors/font_color = Color(0.20612246, 0.0003373003, 0.3215849, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.89166665, 0.75, 0.47843137)
+theme_override_constants/line_spacing = -26
+theme_override_constants/paragraph_spacing = -10
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 50
+theme_override_font_sizes/font_size = 85
+text = "Welcome,
+Biologist!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="User" to="." method="_on_user_pressed"]
 [connection signal="pressed" from="Study" to="." method="_on_study_pressed"]

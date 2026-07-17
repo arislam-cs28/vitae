@@ -4,12 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://gwisdam6txp4" path="res://assets/art/backgrounds/home_bg.png" id="2_5kslw"]
 [ext_resource type="FontFile" uid="uid://dng1lpnkpuaxa" path="res://assets/fonts/Blobby.ttf" id="3_81at1"]
 [ext_resource type="Script" uid="uid://cag35g5h253s6" path="res://reusables/config_button.gd" id="4_5bh5e"]
+[ext_resource type="Texture2D" uid="uid://cb1dkwgpaup8m" path="res://assets/art/buttons/organelles/er_flat.png" id="5_5bh5e"]
+[ext_resource type="Texture2D" uid="uid://b7425smsw8w4o" path="res://assets/art/buttons/organelles/er_hover.png" id="6_45dtr"]
+[ext_resource type="Script" uid="uid://cyn7x8j10nla2" path="res://reusables/texture_button.gd" id="7_2jy27"]
+[ext_resource type="Texture2D" uid="uid://ditcddqf6hdrb" path="res://assets/art/buttons/organelles/golg_flat.png" id="8_avhyv"]
+[ext_resource type="Texture2D" uid="uid://by0mr2yohfcfj" path="res://assets/art/buttons/organelles/golg_hover.png" id="9_2s2c2"]
+[ext_resource type="Texture2D" uid="uid://d4n2gubmibpvx" path="res://assets/art/buttons/organelles/nuc_flat.png" id="10_elj4t"]
+[ext_resource type="Texture2D" uid="uid://c0113ytiy7t0r" path="res://assets/art/buttons/organelles/nuc_hover.png" id="11_3wx0u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_45dtr"]
 texture = ExtResource("2_5kslw")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jy27"]
-bg_color = Color(0.9254902, 0.83137256, 1, 0.85882354)
+bg_color = Color(0.92350006, 0.83, 1, 0.9411765)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -72,7 +79,7 @@ offset_right = 1300.0
 offset_bottom = 800.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_45dtr")
 
-[node name="Upper" type="Panel" parent="." unique_id=340749193]
+[node name="UpperPanel" type="Panel" parent="." unique_id=340749193]
 layout_mode = 0
 offset_left = 88.0
 offset_top = 104.0
@@ -80,7 +87,40 @@ offset_right = 1216.0
 offset_bottom = 728.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2jy27")
 
-[node name="Panel" type="Panel" parent="." unique_id=331199682]
+[node name="TextureRect" type="TextureRect" parent="UpperPanel" unique_id=1148663873]
+modulate = Color(0.46399987, 0.32999998, 1, 0.5529412)
+self_modulate = Color(1, 1, 1, 0.5137255)
+layout_mode = 0
+offset_left = 416.0
+offset_top = 184.0
+offset_right = 767.0
+offset_bottom = 504.0
+texture = ExtResource("11_3wx0u")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="UpperPanel" unique_id=235495749]
+modulate = Color(0.46399987, 0.32999998, 1, 0.5529412)
+self_modulate = Color(1, 1, 1, 0.5137255)
+layout_mode = 0
+offset_left = 680.0
+offset_top = 40.0
+offset_right = 1032.0
+offset_bottom = 352.0
+texture = ExtResource("8_avhyv")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="UpperPanel" unique_id=1525598738]
+modulate = Color(0.46399987, 0.32999998, 1, 0.5529412)
+self_modulate = Color(1, 1, 1, 0.5137255)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 424.0
+offset_bottom = 360.0
+texture = ExtResource("5_5bh5e")
+expand_mode = 1
+
+[node name="Title" type="Panel" parent="." unique_id=331199682]
 layout_mode = 0
 offset_left = 1264.0
 offset_top = 168.0
@@ -89,11 +129,19 @@ offset_bottom = 288.0
 rotation = 1.5707964
 theme_override_styles/panel = SubResource("StyleBoxFlat_wiy03")
 
-[node name="Label" type="Label" parent="Panel" unique_id=1142611691]
-layout_mode = 0
-offset_left = 96.0
-offset_right = 435.0
-offset_bottom = 109.0
+[node name="Label" type="Label" parent="Title" unique_id=1142611691]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.5
+offset_top = -54.5
+offset_right = 169.5
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
 theme_override_font_sizes/font_size = 75
 text = "Resources"
@@ -116,3 +164,266 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_2s2c2")
 text = "Back (to the cell matrix)!"
 script = ExtResource("4_5bh5e")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="TexButton" type="TextureButton" parent="." unique_id=1975484673]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 152.0
+offset_right = 496.0
+offset_bottom = 456.0
+texture_normal = ExtResource("5_5bh5e")
+texture_pressed = ExtResource("5_5bh5e")
+texture_hover = ExtResource("6_45dtr")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("7_2jy27")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Label" type="Label" parent="TexButton" unique_id=672889560]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 111.0
+offset_right = 341.0
+offset_bottom = 199.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.50980395)
+theme_override_constants/shadow_outline_size = 35
+theme_override_font_sizes/font_size = 60
+text = "Textbooks"
+
+[node name="JourButton" type="TextureButton" parent="." unique_id=521737274]
+layout_mode = 0
+offset_left = 776.0
+offset_top = 152.0
+offset_right = 1112.0
+offset_bottom = 440.0
+texture_normal = ExtResource("8_avhyv")
+texture_pressed = ExtResource("8_avhyv")
+texture_hover = ExtResource("9_2s2c2")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("7_2jy27")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Label2" type="Label" parent="JourButton" unique_id=394756275]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 80.0
+offset_right = 284.0
+offset_bottom = 168.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.50980395)
+theme_override_constants/shadow_outline_size = 35
+theme_override_font_sizes/font_size = 60
+text = "Journals"
+
+[node name="MiscButton" type="TextureButton" parent="." unique_id=969932627]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 304.0
+offset_right = 840.0
+offset_bottom = 592.0
+texture_normal = ExtResource("10_elj4t")
+texture_pressed = ExtResource("10_elj4t")
+texture_hover = ExtResource("11_3wx0u")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("7_2jy27")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Label3" type="Label" parent="MiscButton" unique_id=1706683575]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 105.0
+offset_right = 335.0
+offset_bottom = 193.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.50980395)
+theme_override_constants/shadow_outline_size = 35
+theme_override_font_sizes/font_size = 60
+text = "Misc!"
+
+[node name="Textbooks" type="Panel" parent="." unique_id=585226227]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 104.0
+offset_right = 1216.0
+offset_bottom = 728.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2jy27")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Textbooks" unique_id=669320086]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -516.0
+offset_top = -263.0
+offset_right = 448.0
+offset_bottom = 304.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 44
+theme_override_font_sizes/italics_font_size = 44
+bbcode_enabled = true
+text = "- [i] Campbell Biology 12th Edition[/i], (Urry et al., 2020)
+- [i] OpenStax Biology[/i], (Clark et al., 2018)
+- [i] Human Anatomy & Physiology,[/i] (Marieb & Hoehn, 2022)
+- [i]Vanders Human Physiology[/i], (Widmaier, 2018)
+- [i]Genetics: A Conceptual Approach 7th Edition[/i], (Pierce, 2024)
+
+"
+
+[node name="Home" type="Button" parent="Textbooks" unique_id=1704893778]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 538.0
+offset_right = 769.0
+offset_bottom = 585.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_hover_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_fonts/font = ExtResource("3_81at1")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_avhyv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2s2c2")
+text = "Back to the study re-cell-ces!"
+script = ExtResource("4_5bh5e")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Title" type="Panel" parent="Textbooks" unique_id=802756011]
+layout_mode = 0
+offset_left = 1176.0
+offset_top = 64.0
+offset_right = 1680.0
+offset_bottom = 184.0
+rotation = 1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_wiy03")
+
+[node name="Label" type="Label" parent="Textbooks/Title" unique_id=1837663894]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -54.5
+offset_right = 178.0
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_font_sizes/font_size = 75
+text = "Textbooks"
+horizontal_alignment = 1
+
+[node name="Journals" type="Panel" parent="." unique_id=2052803208]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 104.0
+offset_right = 1216.0
+offset_bottom = 728.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2jy27")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Journals" unique_id=215183948]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -516.0
+offset_top = -263.0
+offset_right = 448.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 44
+theme_override_font_sizes/italics_font_size = 44
+bbcode_enabled = true
+text = "- [i]Nature
+- Science | AAAS
+- Proceedings of the National Academy of Sciences
+- PLOS Biology
+- Nature Communications
+- International Journal of Molecular Sciences
+- Sustainable"
+
+[node name="Home" type="Button" parent="Journals" unique_id=1273240461]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 538.0
+offset_right = 769.0
+offset_bottom = 585.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_hover_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_fonts/font = ExtResource("3_81at1")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_avhyv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2s2c2")
+text = "Back to the study re-cell-ces!"
+script = ExtResource("4_5bh5e")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Title" type="Panel" parent="Journals" unique_id=468480675]
+layout_mode = 0
+offset_left = 1176.0
+offset_top = 64.0
+offset_right = 1680.0
+offset_bottom = 184.0
+rotation = 1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_wiy03")
+
+[node name="Label" type="Label" parent="Journals/Title" unique_id=1380436532]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -54.5
+offset_right = 178.0
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_font_sizes/font_size = 75
+text = "Journals"
+horizontal_alignment = 1
+
+[node name="Miscellaneous" type="Panel" parent="." unique_id=388963356]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Close" type="Button" parent="Miscellaneous" unique_id=1527008109]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("4_5bh5e")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Label" type="Label" parent="Miscellaneous" unique_id=1192532867]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 24.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Miscellaneous" unique_id=909760072]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="TexButton" to="." method="_on_tex_button_pressed"]
+[connection signal="pressed" from="JourButton" to="." method="_on_jour_button_pressed"]
+[connection signal="pressed" from="MiscButton" to="." method="_on_misc_button_pressed"]
+[connection signal="pressed" from="Textbooks/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="Journals/Home" to="." method="_on_jour_home_pressed"]
