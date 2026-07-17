@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dmxavd7d5540j"]
+
+[ext_resource type="Script" uid="uid://cyn7x8j10nla2" path="res://reusables/texture_button.gd" id="1_0t4fc"]
+
+[node name="Study" type="Control" unique_id=898544198]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1287167851]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=349682016]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TexButton" type="TextureButton" parent="." unique_id=1598288032]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0t4fc")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="TexButton2" type="TextureButton" parent="." unique_id=1796812136]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0t4fc")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="TexButton3" type="TextureButton" parent="." unique_id=875408361]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0t4fc")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="TexButton4" type="TextureButton" parent="." unique_id=2108618380]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0t4fc")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="TexButton5" type="TextureButton" parent="." unique_id=321871122]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0t4fc")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"

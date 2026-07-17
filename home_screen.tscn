@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dljisyo8udt74"]
 
 [ext_resource type="Script" uid="uid://d3cr3pvgjixy" path="res://home_screen.gd" id="1_ktig4"]
-[ext_resource type="Script" uid="uid://cag35g5h253s6" path="res://reusables/config_button.gd" id="1_olt8n"]
 [ext_resource type="Texture2D" uid="uid://48jos1jp4a2t" path="res://assets/placeholders/home.png" id="2_outur"]
 [ext_resource type="Script" uid="uid://cyn7x8j10nla2" path="res://reusables/texture_button.gd" id="4_fm0op"]
+[ext_resource type="Texture2D" uid="uid://bqf545w7y020n" path="res://assets/placeholders/buton.png" id="4_vivg1"]
+[ext_resource type="Texture2D" uid="uid://brh43hv7g8thl" path="res://assets/placeholders/buton3.png" id="5_o6h2m"]
+[ext_resource type="Texture2D" uid="uid://bjjcr6qjs2dk" path="res://assets/placeholders/buton2.png" id="6_ckqhc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktig4"]
 texture = ExtResource("2_outur")
@@ -17,40 +19,113 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ktig4")
 
-[node name="Background_place" type="Panel" parent="." unique_id=1568890717]
+[node name="Background" type="Panel" parent="." unique_id=1568890717]
 layout_mode = 0
 offset_right = 1300.0
 offset_bottom = 800.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ktig4")
 
-[node name="Options" type="Button" parent="." unique_id=433135908]
+[node name="User" type="TextureButton" parent="." unique_id=1350914221]
 layout_mode = 0
-offset_left = 1080.0
-offset_top = 240.0
-offset_right = 1288.0
-offset_bottom = 376.0
-text = "Options
-"
-script = ExtResource("1_olt8n")
-metadata/_custom_type_script = "uid://cag35g5h253s6"
-
-[node name="Resources" type="Button" parent="." unique_id=731489151]
-layout_mode = 0
-offset_left = 880.0
-offset_top = 256.0
-offset_right = 1032.0
-offset_bottom = 368.0
-text = "resournces"
-script = ExtResource("1_olt8n")
-metadata/_custom_type_script = "uid://cag35g5h253s6"
-
-[node name="TexButton" type="TextureButton" parent="." unique_id=1350914221]
-layout_mode = 0
-offset_left = 448.0
-offset_top = 280.0
-offset_right = 768.0
-offset_bottom = 448.0
+offset_left = 1104.0
+offset_top = 48.0
+offset_right = 1280.0
+offset_bottom = 224.0
+texture_normal = ExtResource("4_vivg1")
+texture_pressed = ExtResource("5_o6h2m")
+texture_hover = ExtResource("6_ckqhc")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("4_fm0op")
 metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
+[node name="Options" type="TextureButton" parent="." unique_id=995940275]
+layout_mode = 0
+offset_left = 1080.0
+offset_top = 248.0
+offset_right = 1280.0
+offset_bottom = 368.0
+texture_normal = ExtResource("4_vivg1")
+texture_pressed = ExtResource("5_o6h2m")
+texture_hover = ExtResource("6_ckqhc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_fm0op")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Resources" type="TextureButton" parent="." unique_id=1745533384]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 256.0
+offset_right = 1056.0
+offset_bottom = 376.0
+texture_normal = ExtResource("4_vivg1")
+texture_pressed = ExtResource("5_o6h2m")
+texture_hover = ExtResource("6_ckqhc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_fm0op")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Study" type="TextureButton" parent="." unique_id=1554401806]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 280.0
+offset_right = 816.0
+offset_bottom = 472.0
+texture_normal = ExtResource("4_vivg1")
+texture_pressed = ExtResource("5_o6h2m")
+texture_hover = ExtResource("6_ckqhc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_fm0op")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="VirtualPet" type="TextureButton" parent="." unique_id=1053206207]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 408.0
+offset_right = 1240.0
+offset_bottom = 600.0
+texture_normal = ExtResource("4_vivg1")
+texture_pressed = ExtResource("5_o6h2m")
+texture_hover = ExtResource("6_ckqhc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_fm0op")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Quickstart" type="TextureButton" parent="." unique_id=1745423749]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 656.0
+offset_right = 1248.0
+offset_bottom = 752.0
+texture_normal = ExtResource("4_vivg1")
+texture_pressed = ExtResource("5_o6h2m")
+texture_hover = ExtResource("6_ckqhc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_fm0op")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Bot" type="TextureButton" parent="." unique_id=1036161844]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 448.0
+offset_right = 360.0
+offset_bottom = 760.0
+texture_normal = ExtResource("4_vivg1")
+texture_pressed = ExtResource("5_o6h2m")
+texture_hover = ExtResource("6_ckqhc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_fm0op")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[connection signal="pressed" from="User" to="." method="_on_user_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Resources" to="." method="_on_resources_pressed"]
+[connection signal="pressed" from="Study" to="." method="_on_study_pressed"]
+[connection signal="pressed" from="VirtualPet" to="." method="_on_virtual_pet_pressed"]
+[connection signal="pressed" from="Bot" to="." method="_on_bot_pressed"]
