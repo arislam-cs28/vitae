@@ -2,14 +2,21 @@
 
 [ext_resource type="Script" uid="uid://d3cr3pvgjixy" path="res://home_screen.gd" id="1_ktig4"]
 [ext_resource type="Texture2D" uid="uid://gwisdam6txp4" path="res://assets/art/backgrounds/home_bg.png" id="2_gf7oa"]
+[ext_resource type="Texture2D" uid="uid://d0a2aynx18u31" path="res://assets/art/buttons/home/profile_flat.png" id="3_whai3"]
+[ext_resource type="Texture2D" uid="uid://cuaduv0uwk0ik" path="res://assets/art/buttons/home/profile_hover.png" id="4_8sfkg"]
 [ext_resource type="Script" uid="uid://cyn7x8j10nla2" path="res://reusables/texture_button.gd" id="4_fm0op"]
-[ext_resource type="Texture2D" uid="uid://bqf545w7y020n" path="res://assets/placeholders/buton.png" id="4_vivg1"]
-[ext_resource type="Texture2D" uid="uid://brh43hv7g8thl" path="res://assets/placeholders/buton3.png" id="5_o6h2m"]
-[ext_resource type="Texture2D" uid="uid://bjjcr6qjs2dk" path="res://assets/placeholders/buton2.png" id="6_ckqhc"]
+[ext_resource type="Texture2D" uid="uid://dibg2ut8003al" path="res://assets/art/buttons/home/study_flat.png" id="6_8sfkg"]
 [ext_resource type="Texture2D" uid="uid://b0lfdug6hkolu" path="res://assets/art/buttons/home/qui_flat.png" id="7_2352u"]
+[ext_resource type="Texture2D" uid="uid://c1aryuoe84fm8" path="res://assets/art/buttons/home/options_flat.png" id="7_jh6v6"]
 [ext_resource type="Texture2D" uid="uid://drnqddya8l6fk" path="res://assets/art/buttons/home/bot_flat.png" id="7_o6h2m"]
+[ext_resource type="Texture2D" uid="uid://qe3dpyf87ei7" path="res://assets/art/buttons/home/study_hover.png" id="7_rai0l"]
 [ext_resource type="Texture2D" uid="uid://dpdw6obvgx25a" path="res://assets/art/buttons/home/qui_hover.png" id="8_1fxkl"]
 [ext_resource type="Texture2D" uid="uid://biyvjfq37ymwp" path="res://assets/art/buttons/home/bot_hover.png" id="8_ckqhc"]
+[ext_resource type="Texture2D" uid="uid://brhe0ibdwenvs" path="res://assets/art/buttons/home/options_hover.png" id="8_s47f5"]
+[ext_resource type="Texture2D" uid="uid://ct7qli0u2lfpb" path="res://assets/art/buttons/home/pet_flat.png" id="9_ikjqu"]
+[ext_resource type="Texture2D" uid="uid://cj1b5lvl8lxt0" path="res://assets/art/buttons/home/pet_hover.png" id="10_4kdek"]
+[ext_resource type="Texture2D" uid="uid://csh8go2d72kyc" path="res://assets/art/buttons/home/rec_flat.png" id="13_rai0l"]
+[ext_resource type="Texture2D" uid="uid://cjae8y3qyooeq" path="res://assets/art/buttons/home/rec_hover.png" id="14_7tdw8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktig4"]
 texture = ExtResource("2_gf7oa")
@@ -31,73 +38,128 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ktig4")
 
 [node name="User" type="TextureButton" parent="." unique_id=1350914221]
 layout_mode = 0
-offset_left = 1080.0
-offset_top = 8.0
-offset_right = 1296.0
-offset_bottom = 224.0
-texture_normal = ExtResource("4_vivg1")
-texture_pressed = ExtResource("5_o6h2m")
-texture_hover = ExtResource("6_ckqhc")
+offset_left = 1064.0
+offset_right = 1300.0
+offset_bottom = 232.0
+texture_normal = ExtResource("3_whai3")
+texture_pressed = ExtResource("3_whai3")
+texture_hover = ExtResource("4_8sfkg")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_fm0op")
 metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
-[node name="Options" type="TextureButton" parent="." unique_id=995940275]
+[node name="Label" type="Label" parent="User" unique_id=260229441]
 layout_mode = 0
-offset_left = 816.0
-offset_top = 440.0
-offset_right = 1232.0
-offset_bottom = 608.0
-texture_normal = ExtResource("4_vivg1")
-texture_pressed = ExtResource("5_o6h2m")
-texture_hover = ExtResource("6_ckqhc")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("4_fm0op")
-metadata/_custom_type_script = "uid://cyn7x8j10nla2"
-
-[node name="Resources" type="TextureButton" parent="." unique_id=1745533384]
-layout_mode = 0
-offset_left = 432.0
-offset_top = 600.0
-offset_right = 800.0
-offset_bottom = 760.0
-texture_normal = ExtResource("4_vivg1")
-texture_pressed = ExtResource("5_o6h2m")
-texture_hover = ExtResource("6_ckqhc")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("4_fm0op")
-metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+offset_left = 56.0
+offset_top = 64.0
+offset_right = 218.0
+offset_bottom = 137.0
+theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_font_sizes/font_size = 50
+text = "Profile"
 
 [node name="Study" type="TextureButton" parent="." unique_id=1554401806]
 layout_mode = 0
-offset_left = 432.0
-offset_top = 256.0
-offset_right = 792.0
+offset_left = 400.0
+offset_top = 240.0
+offset_right = 816.0
 offset_bottom = 592.0
-texture_normal = ExtResource("4_vivg1")
-texture_pressed = ExtResource("5_o6h2m")
-texture_hover = ExtResource("6_ckqhc")
+texture_normal = ExtResource("6_8sfkg")
+texture_pressed = ExtResource("6_8sfkg")
+texture_hover = ExtResource("7_rai0l")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_fm0op")
 metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
+[node name="Label" type="Label" parent="Study" unique_id=320022927]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 58.0
+offset_right = 297.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 55
+text = "My
+Study
+Corner!"
+horizontal_alignment = 1
+
 [node name="VirtualPet" type="TextureButton" parent="." unique_id=1053206207]
 layout_mode = 0
-offset_left = 840.0
-offset_top = 232.0
-offset_right = 1280.0
-offset_bottom = 432.0
-texture_normal = ExtResource("4_vivg1")
-texture_pressed = ExtResource("5_o6h2m")
-texture_hover = ExtResource("6_ckqhc")
+offset_left = 800.0
+offset_top = 200.0
+offset_right = 1304.0
+offset_bottom = 512.0
+texture_normal = ExtResource("9_ikjqu")
+texture_pressed = ExtResource("9_ikjqu")
+texture_hover = ExtResource("10_4kdek")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_fm0op")
 metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Label" type="Label" parent="VirtualPet" unique_id=1766915964]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 49.0
+offset_right = 375.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 50
+text = "Play With
+Cat-alase!"
+
+[node name="Options" type="TextureButton" parent="." unique_id=995940275]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 392.0
+offset_right = 1240.0
+offset_bottom = 688.0
+texture_normal = ExtResource("7_jh6v6")
+texture_pressed = ExtResource("7_jh6v6")
+texture_hover = ExtResource("8_s47f5")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_fm0op")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Label" type="Label" parent="Options" unique_id=848360725]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 94.0
+offset_right = 322.0
+offset_bottom = 167.0
+theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_font_sizes/font_size = 50
+text = "Options"
+
+[node name="Resources" type="TextureButton" parent="." unique_id=1745533384]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 576.0
+offset_right = 808.0
+offset_bottom = 792.0
+texture_normal = ExtResource("13_rai0l")
+texture_pressed = ExtResource("13_rai0l")
+texture_hover = ExtResource("14_7tdw8")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_fm0op")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Label" type="Label" parent="Resources" unique_id=567923804]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 72.0
+offset_right = 306.0
+offset_bottom = 145.0
+theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_font_sizes/font_size = 50
+text = "Resources"
 
 [node name="Quickstart" type="TextureButton" parent="." unique_id=1745423749]
 layout_mode = 0
@@ -139,20 +201,20 @@ metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
 [node name="Label" type="Label" parent="Bot" unique_id=1334041778]
 layout_mode = 0
-offset_left = 72.0
+offset_left = 56.0
 offset_top = 48.0
-offset_right = 331.0
+offset_right = 327.0
 offset_bottom = 195.0
 theme_override_colors/font_color = Color(0.12437331, 0.010636174, 0.3060821, 1)
 theme_override_constants/line_spacing = 0
 theme_override_font_sizes/font_size = 50
 text = "Experiment
-with Vitae!"
+With Vitae!"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="User" to="." method="_on_user_pressed"]
-[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Resources" to="." method="_on_resources_pressed"]
 [connection signal="pressed" from="Study" to="." method="_on_study_pressed"]
 [connection signal="pressed" from="VirtualPet" to="." method="_on_virtual_pet_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Resources" to="." method="_on_resources_pressed"]
 [connection signal="pressed" from="Bot" to="." method="_on_bot_pressed"]
