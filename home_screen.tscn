@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cj1b5lvl8lxt0" path="res://assets/art/buttons/home/pet_hover.png" id="10_4kdek"]
 [ext_resource type="Texture2D" uid="uid://csh8go2d72kyc" path="res://assets/art/buttons/home/rec_flat.png" id="13_rai0l"]
 [ext_resource type="Texture2D" uid="uid://cjae8y3qyooeq" path="res://assets/art/buttons/home/rec_hover.png" id="14_7tdw8"]
+[ext_resource type="Theme" uid="uid://rbsph77s37we" path="res://reusables/gen_fonts.tres" id="16_rai0l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktig4"]
 texture = ExtResource("2_gf7oa")
@@ -103,15 +104,16 @@ metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
 [node name="Label" type="Label" parent="VirtualPet" unique_id=1766915964]
 layout_mode = 0
-offset_left = 144.0
-offset_top = 49.0
-offset_right = 375.0
-offset_bottom = 195.0
+offset_left = 110.0
+offset_top = 56.0
+offset_right = 450.0
+offset_bottom = 202.0
 theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
 theme_override_constants/line_spacing = 0
 theme_override_font_sizes/font_size = 50
-text = "Play With
+text = "Catch Up With
 Cat-alase!"
+horizontal_alignment = 1
 
 [node name="Options" type="TextureButton" parent="." unique_id=995940275]
 layout_mode = 0
@@ -181,11 +183,12 @@ offset_left = 56.0
 offset_top = 48.0
 offset_right = 446.0
 offset_bottom = 121.0
+theme = ExtResource("16_rai0l")
 theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
 theme_override_font_sizes/font_size = 50
 text = "Quickstart Guide"
 
-[node name="Bot" type="TextureButton" parent="." unique_id=1036161844 groups=["Persistent"]]
+[node name="Bot" type="TextureButton" parent="." unique_id=1036161844]
 layout_mode = 0
 offset_left = 48.0
 offset_top = 504.0

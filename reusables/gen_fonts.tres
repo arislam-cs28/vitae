@@ -7,6 +7,8 @@
 [ext_resource type="FontFile" uid="uid://clp7q5txjilhi" path="res://assets/fonts/Jost-Regular.ttf" id="5_4ovi8"]
 
 [resource]
+Label/colors/font_shadow_color = Color(0.93753064, 0.67727983, 0.9738974, 0)
+Label/constants/shadow_outline_size = 12
 Label/fonts/font = ExtResource("1_brqej")
 RichTextLabel/fonts/bold_font = ExtResource("2_44ylc")
 RichTextLabel/fonts/bold_italics_font = ExtResource("3_4ovi8")

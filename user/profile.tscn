@@ -81,11 +81,15 @@ offset_bottom = 728.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5bfkh")
 
 [node name="Panel" type="Panel" parent="." unique_id=354470142]
-layout_mode = 0
-offset_left = 394.0
-offset_top = 48.0
-offset_right = 898.0
-offset_bottom = 168.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -252.0
+offset_top = 42.0
+offset_right = 252.0
+offset_bottom = 162.0
+grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8jvlp")
 
 [node name="Label" type="Label" parent="Panel" unique_id=745237940]
@@ -99,11 +103,18 @@ text = "Profile!"
 horizontal_alignment = 1
 
 [node name="Return" type="Button" parent="." unique_id=645273444]
-layout_mode = 0
-offset_left = 401.0
-offset_top = 642.0
-offset_right = 857.0
-offset_bottom = 689.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -228.0
+offset_top = -155.0
+offset_right = 228.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
 theme_override_colors/font_hover_color = Color(0.1254902, 0.011764706, 0.30588236, 1)

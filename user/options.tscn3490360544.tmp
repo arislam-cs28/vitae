@@ -60,19 +60,11 @@ shadow_color = Color(1, 1, 1, 0.6)
 shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8ukj"]
-bg_color = Color(0, 0.22745098, 0.30588236, 0.69411767)
-border_width_left = 16
-border_width_top = 3
-border_width_right = 16
-border_width_bottom = 3
-border_color = Color(0.42352942, 0.8, 0.8, 1)
-border_blend = true
+bg_color = Color(7.821247e-07, 0.22883207, 0.30616266, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
-shadow_color = Color(0.13725491, 0.14901961, 0.32156864, 0.34117648)
-shadow_size = 100
 
 [node name="Options" type="Control" unique_id=355271672]
 layout_mode = 3
@@ -245,7 +237,7 @@ text = "Yes"
 script = ExtResource("1_03v0f")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
 
-[node name="QScreen" type="Panel" parent="." unique_id=678760068]
+[node name="Panel" type="Panel" parent="." unique_id=678760068]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -260,7 +252,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_s8ukj")
 
-[node name="Label" type="Label" parent="QScreen" unique_id=305392399]
+[node name="Label" type="Label" parent="Panel" unique_id=305392399]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -278,37 +270,29 @@ text = "Do you really want
 to reset all of your progress?"
 horizontal_alignment = 1
 
-[node name="Leave" type="Button" parent="QScreen" unique_id=280425546]
+[node name="Leave" type="Button" parent="Panel" unique_id=280425546]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 121.0
-offset_top = 37.0
+offset_top = 32.0
 offset_right = 300.0
-offset_bottom = 89.0
+offset_bottom = 84.0
 grow_vertical = 2
-theme = ExtResource("5_kucrc")
-theme_override_fonts/font = ExtResource("5_2l7rp")
-theme_override_font_sizes/font_size = 25
-text = "Yes!"
 script = ExtResource("1_03v0f")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
 
-[node name="Stay" type="Button" parent="QScreen" unique_id=859523644]
+[node name="Stay" type="Button" parent="Panel" unique_id=859523644]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 336.0
-offset_top = 37.0
+offset_top = 32.0
 offset_right = 515.0
-offset_bottom = 89.0
+offset_bottom = 84.0
 grow_vertical = 2
-theme = ExtResource("5_kucrc")
-theme_override_fonts/font = ExtResource("5_2l7rp")
-theme_override_font_sizes/font_size = 25
-text = "No!"
 script = ExtResource("1_03v0f")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
 
@@ -318,5 +302,3 @@ metadata/_custom_type_script = "uid://cag35g5h253s6"
 [connection signal="pressed" from="SFXLabel/No" to="." method="_on_sfx_no_pressed"]
 [connection signal="pressed" from="SFXLabel/Yes" to="." method="_on_sfx_yes_pressed"]
 [connection signal="pressed" from="Quit/Yes" to="." method="_on_reset_pressed"]
-[connection signal="pressed" from="QScreen/Leave" to="." method="_on_leave_pressed"]
-[connection signal="pressed" from="QScreen/Stay" to="." method="_on_stay_pressed"]
