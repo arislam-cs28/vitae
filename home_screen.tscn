@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://dljisyo8udt74"]
 
 [ext_resource type="Script" uid="uid://d3cr3pvgjixy" path="res://home_screen.gd" id="1_ktig4"]
-[ext_resource type="Texture2D" uid="uid://48jos1jp4a2t" path="res://assets/placeholders/home.png" id="2_outur"]
+[ext_resource type="Texture2D" uid="uid://gwisdam6txp4" path="res://assets/art/backgrounds/home_bg.png" id="2_gf7oa"]
 [ext_resource type="Script" uid="uid://cyn7x8j10nla2" path="res://reusables/texture_button.gd" id="4_fm0op"]
 [ext_resource type="Texture2D" uid="uid://bqf545w7y020n" path="res://assets/placeholders/buton.png" id="4_vivg1"]
 [ext_resource type="Texture2D" uid="uid://brh43hv7g8thl" path="res://assets/placeholders/buton3.png" id="5_o6h2m"]
 [ext_resource type="Texture2D" uid="uid://bjjcr6qjs2dk" path="res://assets/placeholders/buton2.png" id="6_ckqhc"]
+[ext_resource type="Texture2D" uid="uid://drnqddya8l6fk" path="res://assets/art/buttons/home/bot_flat.png" id="7_o6h2m"]
+[ext_resource type="Texture2D" uid="uid://biyvjfq37ymwp" path="res://assets/art/buttons/home/bot_hover.png" id="8_ckqhc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktig4"]
-texture = ExtResource("2_outur")
+texture = ExtResource("2_gf7oa")
 
 [node name="HomeScreen" type="Control" unique_id=60046038]
 layout_mode = 3
@@ -27,9 +29,9 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ktig4")
 
 [node name="User" type="TextureButton" parent="." unique_id=1350914221]
 layout_mode = 0
-offset_left = 1104.0
-offset_top = 48.0
-offset_right = 1280.0
+offset_left = 1080.0
+offset_top = 8.0
+offset_right = 1296.0
 offset_bottom = 224.0
 texture_normal = ExtResource("4_vivg1")
 texture_pressed = ExtResource("5_o6h2m")
@@ -41,10 +43,10 @@ metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
 [node name="Options" type="TextureButton" parent="." unique_id=995940275]
 layout_mode = 0
-offset_left = 1080.0
-offset_top = 248.0
-offset_right = 1280.0
-offset_bottom = 368.0
+offset_left = 816.0
+offset_top = 440.0
+offset_right = 1232.0
+offset_bottom = 608.0
 texture_normal = ExtResource("4_vivg1")
 texture_pressed = ExtResource("5_o6h2m")
 texture_hover = ExtResource("6_ckqhc")
@@ -55,10 +57,10 @@ metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
 [node name="Resources" type="TextureButton" parent="." unique_id=1745533384]
 layout_mode = 0
-offset_left = 856.0
-offset_top = 256.0
-offset_right = 1056.0
-offset_bottom = 376.0
+offset_left = 432.0
+offset_top = 600.0
+offset_right = 800.0
+offset_bottom = 760.0
 texture_normal = ExtResource("4_vivg1")
 texture_pressed = ExtResource("5_o6h2m")
 texture_hover = ExtResource("6_ckqhc")
@@ -69,10 +71,10 @@ metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
 [node name="Study" type="TextureButton" parent="." unique_id=1554401806]
 layout_mode = 0
-offset_left = 456.0
-offset_top = 280.0
-offset_right = 816.0
-offset_bottom = 472.0
+offset_left = 432.0
+offset_top = 256.0
+offset_right = 792.0
+offset_bottom = 592.0
 texture_normal = ExtResource("4_vivg1")
 texture_pressed = ExtResource("5_o6h2m")
 texture_hover = ExtResource("6_ckqhc")
@@ -83,10 +85,10 @@ metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
 [node name="VirtualPet" type="TextureButton" parent="." unique_id=1053206207]
 layout_mode = 0
-offset_left = 880.0
-offset_top = 408.0
-offset_right = 1240.0
-offset_bottom = 600.0
+offset_left = 840.0
+offset_top = 232.0
+offset_right = 1280.0
+offset_bottom = 432.0
 texture_normal = ExtResource("4_vivg1")
 texture_pressed = ExtResource("5_o6h2m")
 texture_hover = ExtResource("6_ckqhc")
@@ -109,19 +111,32 @@ stretch_mode = 0
 script = ExtResource("4_fm0op")
 metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
-[node name="Bot" type="TextureButton" parent="." unique_id=1036161844]
+[node name="Bot" type="TextureButton" parent="." unique_id=1036161844 groups=["Persistent"]]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 448.0
-offset_right = 360.0
-offset_bottom = 760.0
-texture_normal = ExtResource("4_vivg1")
-texture_pressed = ExtResource("5_o6h2m")
-texture_hover = ExtResource("6_ckqhc")
+offset_left = 48.0
+offset_top = 504.0
+offset_right = 470.4
+offset_bottom = 768.0
+texture_normal = ExtResource("7_o6h2m")
+texture_pressed = ExtResource("7_o6h2m")
+texture_hover = ExtResource("8_ckqhc")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_fm0op")
 metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Label" type="Label" parent="Bot" unique_id=1334041778]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 48.0
+offset_right = 331.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0.12437331, 0.010636174, 0.3060821, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 50
+text = "Experiment
+with Vitae!"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="User" to="." method="_on_user_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
