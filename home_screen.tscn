@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bqf545w7y020n" path="res://assets/placeholders/buton.png" id="4_vivg1"]
 [ext_resource type="Texture2D" uid="uid://brh43hv7g8thl" path="res://assets/placeholders/buton3.png" id="5_o6h2m"]
 [ext_resource type="Texture2D" uid="uid://bjjcr6qjs2dk" path="res://assets/placeholders/buton2.png" id="6_ckqhc"]
+[ext_resource type="Texture2D" uid="uid://dpue0llcxq0iu" path="res://assets/art/buttons/home/qui_flat.png" id="7_2352u"]
 [ext_resource type="Texture2D" uid="uid://drnqddya8l6fk" path="res://assets/art/buttons/home/bot_flat.png" id="7_o6h2m"]
+[ext_resource type="Texture2D" uid="uid://3pc1pa2xjqbq" path="res://assets/art/buttons/home/qui_hover.png" id="8_1fxkl"]
 [ext_resource type="Texture2D" uid="uid://biyvjfq37ymwp" path="res://assets/art/buttons/home/bot_hover.png" id="8_ckqhc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktig4"]
@@ -99,13 +101,12 @@ metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
 [node name="Quickstart" type="TextureButton" parent="." unique_id=1745423749]
 layout_mode = 0
-offset_left = 888.0
-offset_top = 656.0
-offset_right = 1248.0
-offset_bottom = 752.0
-texture_normal = ExtResource("4_vivg1")
-texture_pressed = ExtResource("5_o6h2m")
-texture_hover = ExtResource("6_ckqhc")
+offset_top = 8.0
+offset_right = 1296.0
+offset_bottom = 800.0
+texture_normal = ExtResource("7_2352u")
+texture_pressed = ExtResource("7_2352u")
+texture_hover = ExtResource("8_1fxkl")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_fm0op")
