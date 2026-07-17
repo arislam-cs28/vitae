@@ -2,6 +2,60 @@
 
 [ext_resource type="Script" uid="uid://cag35g5h253s6" path="res://reusables/config_button.gd" id="1_03v0f"]
 [ext_resource type="Script" uid="uid://b7v1v333ouy3h" path="res://user/options.gd" id="1_fwo0k"]
+[ext_resource type="Texture2D" uid="uid://gwisdam6txp4" path="res://assets/art/backgrounds/home_bg.png" id="2_nd8fk"]
+[ext_resource type="FontFile" uid="uid://dng1lpnkpuaxa" path="res://assets/fonts/Blobby.ttf" id="3_2l7rp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nhn7g"]
+texture = ExtResource("2_nd8fk")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mi0vw"]
+bg_color = Color(0.9254902, 0.83137256, 1, 0.85882354)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.21176471, 0.09803922, 1, 0.45882353)
+border_blend = true
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+shadow_color = Color(0, 0, 0.3529412, 0.21960784)
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5gp0n"]
+bg_color = Color(0.75489706, 0.6709232, 1, 1)
+border_width_left = 7
+border_width_top = 5
+border_width_right = 7
+border_width_bottom = 3
+border_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+shadow_color = Color(0.54509807, 0.4, 0.7137255, 0.3254902)
+shadow_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huv4v"]
+bg_color = Color(0.21245876, 0.00034509748, 0.6236954, 0.63529414)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8wov"]
+bg_color = Color(0.6509804, 0.6, 0.9529412, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 20
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 10
 
 [node name="Options" type="Control" unique_id=355271672]
 layout_mode = 3
@@ -16,23 +70,49 @@ script = ExtResource("1_fwo0k")
 layout_mode = 0
 offset_right = 1300.0
 offset_bottom = 800.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nhn7g")
 
-[node name="Label" type="Label" parent="." unique_id=275902785]
+[node name="Upper" type="Panel" parent="." unique_id=1790691998]
 layout_mode = 0
-offset_left = 504.0
-offset_top = 336.0
-offset_right = 789.0
-offset_bottom = 359.0
-text = "yo this is the settings section wassup"
+offset_left = 88.0
+offset_top = 104.0
+offset_right = 1216.0
+offset_bottom = 728.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mi0vw")
+
+[node name="Panel" type="Panel" parent="." unique_id=1742718448]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 48.0
+offset_right = 898.0
+offset_bottom = 168.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5gp0n")
+
+[node name="Label" type="Label" parent="Panel" unique_id=275902785]
+layout_mode = 0
+offset_left = 107.0
+offset_right = 398.0
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_font_sizes/font_size = 75
+text = "Options!"
+horizontal_alignment = 1
 
 [node name="Return" type="Button" parent="." unique_id=1783804109]
 layout_mode = 0
-offset_left = 512.0
-offset_top = 600.0
-offset_right = 694.0
-offset_bottom = 631.0
-text = "retunr to home screen
-"
+offset_left = 401.0
+offset_top = 642.0
+offset_right = 857.0
+offset_bottom = 689.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_hover_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_fonts/font = ExtResource("3_2l7rp")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_huv4v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t8wov")
+text = "Back (to the cell matrix)!"
 script = ExtResource("1_03v0f")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
 
