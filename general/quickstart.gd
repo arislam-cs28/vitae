@@ -3,7 +3,7 @@ extends Node2D
 var index = 0
 
 var instruct = [
-	"To maneuver the interface, you only need one key! The spacebar! Hover your cursor over the [i]next[/i] button and press the spacebar.",
+	"Welcome to Dr. Vitae's laboratory! To maneuver the interface, you only need one key! The spacebar! Hover your cursor over the [i]next[/i] button and press the spacebar.",
 	"Awesome job! Now, for the interface. For whatever section you want to go to, hover your cursor over its cell, and then press the spacebar.",
 	"In the [i]Options[/i] section, you can set the SFX and music to be on or off.",
 	"You can also reset your study session progress there.",

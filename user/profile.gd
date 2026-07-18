@@ -7,11 +7,6 @@ func _ready() -> void:
 	$InterestSet.hide()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_return_pressed() -> void:
 	get_tree().change_scene_to_file("res://home_screen.tscn")
 
@@ -41,17 +36,6 @@ func _on_cram_pressed() -> void:
 	UserStats.study_motivation = "cram for a test"
 	goal_set()
 	
-func goal_set():
-	$GoalSet.show()
-	await get_tree().create_timer(2.0).timeout
-	$GoalSet.hide()
-
-func interest_set():
-	$InterestSet.show()
-	await get_tree().create_timer(2.0).timeout
-	$InterestSet.hide()
-
-
 func _on_microbio_pressed() -> void:
 	UserStats.interest = "microbiology"
 	interest_set()
@@ -110,3 +94,13 @@ func _on_molecular_pressed() -> void:
 func _on_viro_pressed() -> void:
 	UserStats.interest = "virology"
 	interest_set()
+	
+func goal_set():
+	$GoalSet.show()
+	await get_tree().create_timer(2.0).timeout
+	$GoalSet.hide()
+
+func interest_set():
+	$InterestSet.show()
+	await get_tree().create_timer(2.0).timeout
+	$InterestSet.hide()

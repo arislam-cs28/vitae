@@ -4,12 +4,6 @@ class_name NewButton
 
 @export var clicky: String = "yes"
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void: # i should honestly probably delete this but who knows what will happen if I do
-	pass # Replace with function body.
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if is_hovered(): # checking to see if the button is hovered over

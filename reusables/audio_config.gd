@@ -4,10 +4,6 @@ extends AudioStreamPlayer2D
 func _ready() -> void:
 	get_tree().node_added.connect(_on_node_added)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
 func _on_node_added(node: Node):
 	if node is NewButton or node is TexButton:
 		if not node.pressed.is_connected(sound):

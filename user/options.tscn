@@ -6,6 +6,9 @@
 [ext_resource type="FontFile" uid="uid://dng1lpnkpuaxa" path="res://assets/fonts/Blobby.ttf" id="3_2l7rp"]
 [ext_resource type="FontFile" uid="uid://brv2bcvjlgye5" path="res://assets/fonts/Jost-Bold.ttf" id="5_2l7rp"]
 [ext_resource type="Theme" uid="uid://dy2ysrssjnvvb" path="res://reusables/options_buttons.tres" id="5_kucrc"]
+[ext_resource type="Texture2D" uid="uid://b7425smsw8w4o" path="res://assets/art/buttons/organelles/er_hover.png" id="5_u5c13"]
+[ext_resource type="Texture2D" uid="uid://c0113ytiy7t0r" path="res://assets/art/buttons/organelles/nuc_hover.png" id="6_keel4"]
+[ext_resource type="Texture2D" uid="uid://by0mr2yohfcfj" path="res://assets/art/buttons/organelles/golg_hover.png" id="7_3yywu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nhn7g"]
 texture = ExtResource("2_nd8fk")
@@ -144,13 +147,46 @@ text = "Back (to the cell matrix)!"
 script = ExtResource("1_03v0f")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
 
+[node name="Music" type="TextureRect" parent="." unique_id=1092696703]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 136.0
+offset_right = 536.0
+offset_bottom = 432.0
+rotation = 0.2617994
+texture = ExtResource("5_u5c13")
+expand_mode = 1
+
+[node name="SFX" type="TextureRect" parent="." unique_id=107498770]
+layout_mode = 0
+offset_left = 455.99997
+offset_top = 344.0
+offset_right = 792.0
+offset_bottom = 648.0
+rotation = -0.2617994
+texture = ExtResource("6_keel4")
+expand_mode = 1
+
+[node name="Reset" type="TextureRect" parent="." unique_id=830053163]
+layout_mode = 0
+offset_left = 847.99994
+offset_top = 135.99998
+offset_right = 1224.0
+offset_bottom = 448.0
+rotation = 0.2617994
+texture = ExtResource("7_3yywu")
+expand_mode = 1
+
 [node name="MusicLabel" type="RichTextLabel" parent="." unique_id=487071089]
 layout_mode = 0
-offset_left = 176.0
-offset_top = 256.0
-offset_right = 368.0
-offset_bottom = 392.0
+offset_left = 208.0
+offset_top = 276.0
+offset_right = 400.0
+offset_bottom = 412.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_2l7rp")
 theme_override_font_sizes/normal_font_size = 52
 bbcode_enabled = true
 text = "Music!"
@@ -184,11 +220,12 @@ metadata/_custom_type_script = "uid://cag35g5h253s6"
 
 [node name="SFXLabel" type="RichTextLabel" parent="." unique_id=1067376577]
 layout_mode = 0
-offset_left = 536.0
-offset_top = 384.0
-offset_right = 730.0
-offset_bottom = 520.0
+offset_left = 552.0
+offset_top = 400.0
+offset_right = 746.0
+offset_bottom = 536.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_2l7rp")
 theme_override_font_sizes/normal_font_size = 52
 bbcode_enabled = true
 text = "SFX!"
@@ -222,11 +259,12 @@ metadata/_custom_type_script = "uid://cag35g5h253s6"
 
 [node name="Quit" type="RichTextLabel" parent="." unique_id=1670376985]
 layout_mode = 0
-offset_left = 912.0
-offset_top = 240.0
-offset_right = 1098.0
-offset_bottom = 376.0
+offset_left = 904.0
+offset_top = 256.0
+offset_right = 1090.0
+offset_bottom = 392.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_2l7rp")
 theme_override_font_sizes/normal_font_size = 52
 bbcode_enabled = true
 text = "Reset!"
@@ -246,6 +284,7 @@ script = ExtResource("1_03v0f")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
 
 [node name="QScreen" type="Panel" parent="." unique_id=678760068]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
