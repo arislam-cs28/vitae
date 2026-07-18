@@ -9,7 +9,7 @@ var instruct = [
 	"You can also reset your study session progress there.",
 	"With Cat-alase, you can see your study session achievements.",
 	"By experimenting with Dr. Vitae, you may get lab advice or random study fun.",
-	"In the [i]Profile[/i] section, you can set your gender identity, study goal, and study interest for the session.",
+	"In the [i]Profile[/i] section, you can set your study goal and study interest for the session.",
 	"To get trustworthy resources, click on the [i]Resources[/i] section.",
 	"You can also catch up on studying in [i]My Study Corner[/i]!",
 	"And Dr. Vitae may surprise you if you click on him on the home screen!",

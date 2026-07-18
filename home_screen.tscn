@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dljisyo8udt74"]
 
 [ext_resource type="Script" uid="uid://d3cr3pvgjixy" path="res://home_screen.gd" id="1_ktig4"]
-[ext_resource type="PackedScene" uid="uid://jyg0mc2ob3hv" path="res://user/profile.tscn" id="2_7tdw8"]
 [ext_resource type="Texture2D" uid="uid://gwisdam6txp4" path="res://assets/art/backgrounds/home_bg.png" id="2_gf7oa"]
 [ext_resource type="Texture2D" uid="uid://d0a2aynx18u31" path="res://assets/art/buttons/home/profile_flat.png" id="3_whai3"]
 [ext_resource type="Texture2D" uid="uid://cuaduv0uwk0ik" path="res://assets/art/buttons/home/profile_hover.png" id="4_8sfkg"]
@@ -20,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://cjae8y3qyooeq" path="res://assets/art/buttons/home/rec_hover.png" id="14_7tdw8"]
 [ext_resource type="Theme" uid="uid://rbsph77s37we" path="res://reusables/gen_fonts.tres" id="16_rai0l"]
 [ext_resource type="PackedScene" uid="uid://culu1svux4rd3" path="res://general/quickstart_scn.tscn" id="20_fbpv5"]
+[ext_resource type="Texture2D" uid="uid://c576weugb0f3o" path="res://assets/art/bot/vitae_flat.png" id="21_j6yog"]
+[ext_resource type="Texture2D" uid="uid://bwqokg7gcw452" path="res://assets/art/bot/vitae_hover.png" id="22_ct7v8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktig4"]
 texture = ExtResource("2_gf7oa")
@@ -32,9 +33,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ktig4")
-
-[node name="Profile" parent="." unique_id=1610443149 instance=ExtResource("2_7tdw8")]
-layout_mode = 1
 
 [node name="Background" type="Panel" parent="." unique_id=1568890717]
 layout_mode = 0
@@ -245,7 +243,22 @@ Biologist!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TexButton" type="TextureButton" parent="." unique_id=1401184374]
+layout_mode = 0
+offset_left = 56.0
+offset_top = -24.0
+offset_right = 456.0
+offset_bottom = 592.0
+texture_normal = ExtResource("21_j6yog")
+texture_pressed = ExtResource("21_j6yog")
+texture_hover = ExtResource("22_ct7v8")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_fm0op")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
 [node name="QuickstartScreen" parent="." unique_id=1958962644 instance=ExtResource("20_fbpv5")]
+visible = false
 
 [connection signal="pressed" from="User" to="." method="_on_user_pressed"]
 [connection signal="pressed" from="Study" to="." method="_on_study_pressed"]

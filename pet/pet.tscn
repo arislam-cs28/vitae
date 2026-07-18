@@ -1,5 +1,63 @@
 [gd_scene format=3 uid="uid://drbn7a6xwcjyc"]
 
+[ext_resource type="Script" uid="uid://3orvaqte240q" path="res://pet/pet.gd" id="1_hvnc7"]
+[ext_resource type="Texture2D" uid="uid://gwisdam6txp4" path="res://assets/art/backgrounds/home_bg.png" id="2_mdwvh"]
+[ext_resource type="Texture2D" uid="uid://bhaw2blknuk2g" path="res://assets/art/IMG_2391.png" id="3_j6gt8"]
+[ext_resource type="FontFile" uid="uid://dng1lpnkpuaxa" path="res://assets/fonts/Blobby.ttf" id="4_4tmus"]
+[ext_resource type="Script" uid="uid://cag35g5h253s6" path="res://reusables/config_button.gd" id="5_rdmdk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d877u"]
+texture = ExtResource("2_mdwvh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2k7w"]
+bg_color = Color(0.9254902, 0.83137256, 1, 0.85882354)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.21176471, 0.09803922, 1, 0.45882353)
+border_blend = true
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+shadow_color = Color(0, 0, 0.3529412, 0.21960784)
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnrc3"]
+bg_color = Color(0.75489706, 0.6709232, 1, 1)
+border_width_left = 7
+border_width_top = 5
+border_width_right = 7
+border_width_bottom = 3
+border_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+shadow_color = Color(0.54509807, 0.4, 0.7137255, 0.3254902)
+shadow_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5u73c"]
+bg_color = Color(0.15686275, 0, 0.6156863, 0.63529414)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfdp0"]
+bg_color = Color(0.6509804, 0.6, 0.9529412, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 20
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 10
+
 [node name="Pet" type="Control" unique_id=996663867]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +65,92 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hvnc7")
+
+[node name="Background" type="Panel" parent="." unique_id=844125454]
+layout_mode = 0
+offset_right = 1300.0
+offset_bottom = 800.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_d877u")
+
+[node name="Upper" type="Panel" parent="Background" unique_id=877917161]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 104.0
+offset_right = 1216.0
+offset_bottom = 728.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o2k7w")
+
+[node name="Heading" type="Panel" parent="Background" unique_id=1008645947]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -252.0
+offset_top = 43.0
+offset_right = 252.0
+offset_bottom = 163.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tnrc3")
+
+[node name="Label" type="Label" parent="Background/Heading" unique_id=333936185]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.5
+offset_top = -54.5
+offset_right = 173.5
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_font_sizes/font_size = 75
+text = "Cat-alase!"
+horizontal_alignment = 1
+
+[node name="Img2391" type="Sprite2D" parent="." unique_id=954671303]
+position = Vector2(600, 432)
+scale = Vector2(0.8630769, 0.85)
+texture = ExtResource("3_j6gt8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=623032695]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 208.0
+offset_right = 1088.0
+offset_bottom = 576.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "You are 100% super smart! 
+
+(yeah, that's your only stat)"
+
+[node name="Return" type="Button" parent="." unique_id=1323764512]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -138.0
+offset_top = -176.0
+offset_right = 518.0
+offset_bottom = -129.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_hover_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_fonts/font = ExtResource("4_4tmus")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_5u73c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gfdp0")
+text = "Back (to the cell matrix)!"
+script = ExtResource("5_rdmdk")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://gwisdam6txp4" path="res://assets/art/backgrounds/home_bg.png" id="2_553xv"]
 [ext_resource type="FontFile" uid="uid://dng1lpnkpuaxa" path="res://assets/fonts/Blobby.ttf" id="3_x0bx6"]
 [ext_resource type="Script" uid="uid://cag35g5h253s6" path="res://reusables/config_button.gd" id="4_ovoc0"]
+[ext_resource type="Theme" uid="uid://dy2ysrssjnvvb" path="res://reusables/options_buttons.tres" id="6_415sv"]
+[ext_resource type="FontFile" uid="uid://brv2bcvjlgye5" path="res://assets/fonts/Jost-Bold.ttf" id="7_5bfkh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_415sv"]
 texture = ExtResource("2_553xv")
@@ -57,6 +59,25 @@ corner_detail = 20
 shadow_color = Color(1, 1, 1, 0.6)
 shadow_size = 10
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mi0vw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5gp0n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mi0vw"]
+bg_color = Color(0.3294118, 0.8, 0.6852941, 1)
+border_width_left = 10
+border_width_top = 20
+border_width_right = 10
+border_width_bottom = 20
+border_color = Color(0.55625, 0.91679686, 1, 1)
+border_blend = true
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+shadow_color = Color(0.52401507, 0.46470705, 0.64375, 0.6)
+shadow_size = 100
+
 [node name="Profile" type="Control" unique_id=1610443149]
 layout_mode = 3
 anchors_preset = 15
@@ -72,7 +93,7 @@ offset_right = 1300.0
 offset_bottom = 800.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_415sv")
 
-[node name="Upper" type="Panel" parent="." unique_id=1797741725]
+[node name="Upper" type="Panel" parent="Background" unique_id=1797741725]
 layout_mode = 0
 offset_left = 88.0
 offset_top = 104.0
@@ -80,7 +101,29 @@ offset_right = 1216.0
 offset_bottom = 728.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5bfkh")
 
-[node name="Panel" type="Panel" parent="." unique_id=354470142]
+[node name="Interest" type="Label" parent="Background" unique_id=147433501]
+layout_mode = 0
+offset_left = 789.0
+offset_top = 165.0
+offset_right = 1065.0
+offset_bottom = 245.0
+theme_override_colors/font_color = Color(0.34485364, 0.030468754, 0.375, 1)
+theme_override_font_sizes/font_size = 40
+text = "Study Interest"
+horizontal_alignment = 1
+
+[node name="Goal" type="Label" parent="Background" unique_id=1076206046]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 165.0
+offset_right = 476.0
+offset_bottom = 245.0
+theme_override_colors/font_color = Color(0.34485364, 0.030468754, 0.375, 1)
+theme_override_font_sizes/font_size = 40
+text = "Study Goal"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="Background" unique_id=354470142]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -92,7 +135,7 @@ offset_bottom = 162.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8jvlp")
 
-[node name="Label" type="Label" parent="Panel" unique_id=745237940]
+[node name="Label" type="Label" parent="Background/Panel" unique_id=745237940]
 layout_mode = 0
 offset_left = 107.0
 offset_right = 398.0
@@ -127,4 +170,354 @@ text = "Back (to the cell matrix)!"
 script = ExtResource("4_ovoc0")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
 
+[node name="Line2D" type="Line2D" parent="." unique_id=1683567276]
+position = Vector2(-27, 0)
+points = PackedVector2Array(656, 184, 656, 608)
+default_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 12
+
+[node name="InterestPanel" type="Panel" parent="." unique_id=889453797]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 162.0
+offset_right = 1216.0
+offset_bottom = 616.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mi0vw")
+
+[node name="Microbio" type="Button" parent="InterestPanel" unique_id=1252020691]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 74.0
+offset_right = 280.0
+offset_bottom = 114.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Microbiology"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Eco" type="Button" parent="InterestPanel" unique_id=1715365922]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 74.0
+offset_right = 528.0
+offset_bottom = 114.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Ecology"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Botan" type="Button" parent="InterestPanel" unique_id=485696791]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 132.0
+offset_right = 270.0
+offset_bottom = 172.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Botany"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="EvoBio" type="Button" parent="InterestPanel" unique_id=1865289401]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 132.0
+offset_right = 528.0
+offset_bottom = 172.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Evolutionary Biology"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Zoo" type="Button" parent="InterestPanel" unique_id=463000364]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 192.0
+offset_right = 280.0
+offset_bottom = 232.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Zoology"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Med" type="Button" parent="InterestPanel" unique_id=1457002506]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 190.0
+offset_right = 528.0
+offset_bottom = 230.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Medicine + Health"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Biochem" type="Button" parent="InterestPanel" unique_id=640232627]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 252.0
+offset_right = 272.0
+offset_bottom = 292.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Biochemistry"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Astrobio" type="Button" parent="InterestPanel" unique_id=1057170678]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 252.0
+offset_right = 528.0
+offset_bottom = 292.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Astrobiology"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Biomed" type="Button" parent="InterestPanel" unique_id=1484792106]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 314.0
+offset_right = 297.0
+offset_bottom = 354.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Biomedical Engineering"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Gene" type="Button" parent="InterestPanel" unique_id=1698378602]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 314.0
+offset_right = 528.0
+offset_bottom = 354.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Genetics"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Molecular" type="Button" parent="InterestPanel" unique_id=2017031761]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 378.0
+offset_right = 297.0
+offset_bottom = 418.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Molecular Biology"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Viro" type="Button" parent="InterestPanel" unique_id=299404797]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 378.0
+offset_right = 529.0
+offset_bottom = 418.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Virology"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="GoalPanel" type="Panel" parent="." unique_id=522205449]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 162.0
+offset_right = 624.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5gp0n")
+
+[node name="Recall" type="Button" parent="GoalPanel" unique_id=299910523]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 78.0
+offset_right = 430.0
+offset_bottom = 118.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Active Recall"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Learn" type="Button" parent="GoalPanel" unique_id=2126724388]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 136.0
+offset_right = 430.0
+offset_bottom = 176.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Learn New Materials"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Review" type="Button" parent="GoalPanel" unique_id=1527067804]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 195.0
+offset_right = 430.0
+offset_bottom = 235.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Review Materials"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Inspiration" type="Button" parent="GoalPanel" unique_id=1877951977]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 258.0
+offset_right = 430.0
+offset_bottom = 298.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Get Inspired"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Mastery" type="Button" parent="GoalPanel" unique_id=1392089965]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 319.0
+offset_right = 430.0
+offset_bottom = 359.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Concept Mastery"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Cram" type="Button" parent="GoalPanel" unique_id=1312018001]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 381.0
+offset_right = 430.0
+offset_bottom = 421.0
+theme = ExtResource("6_415sv")
+theme_override_fonts/font = ExtResource("7_5bfkh")
+theme_override_font_sizes/font_size = 20
+text = "Test Cram
+"
+script = ExtResource("4_ovoc0")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="GoalSet" type="Panel" parent="." unique_id=1373885200]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -204.5
+offset_top = -84.0
+offset_right = 204.5
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mi0vw")
+
+[node name="Label" type="Label" parent="GoalSet" unique_id=1003745765]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -14.0
+offset_right = 37.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.20784314, 0.08235294, 0.38039216, 0.60784316)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 25
+theme_override_font_sizes/font_size = 70
+text = "Goal set!"
+
+[node name="InterestSet" type="Panel" parent="." unique_id=1065810862]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -279.0
+offset_top = -84.0
+offset_right = 279.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mi0vw")
+
+[node name="Label" type="Label" parent="InterestSet" unique_id=1634538019]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -14.0
+offset_right = 37.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.20784314, 0.08235294, 0.38039216, 0.60784316)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 25
+theme_override_font_sizes/font_size = 70
+text = "Interest set!"
+
 [connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="InterestPanel/Microbio" to="." method="_on_microbio_pressed"]
+[connection signal="pressed" from="InterestPanel/Eco" to="." method="_on_eco_pressed"]
+[connection signal="pressed" from="InterestPanel/Botan" to="." method="_on_botan_pressed"]
+[connection signal="pressed" from="InterestPanel/EvoBio" to="." method="_on_evo_bio_pressed"]
+[connection signal="pressed" from="InterestPanel/Zoo" to="." method="_on_zoo_pressed"]
+[connection signal="pressed" from="InterestPanel/Med" to="." method="_on_med_pressed"]
+[connection signal="pressed" from="InterestPanel/Biochem" to="." method="_on_biochem_pressed"]
+[connection signal="pressed" from="InterestPanel/Astrobio" to="." method="_on_astrobio_pressed"]
+[connection signal="pressed" from="InterestPanel/Biomed" to="." method="_on_biomed_pressed"]
+[connection signal="pressed" from="InterestPanel/Gene" to="." method="_on_gene_pressed"]
+[connection signal="pressed" from="InterestPanel/Molecular" to="." method="_on_molecular_pressed"]
+[connection signal="pressed" from="InterestPanel/Viro" to="." method="_on_viro_pressed"]
+[connection signal="pressed" from="GoalPanel/Recall" to="." method="_on_recall_pressed"]
+[connection signal="pressed" from="GoalPanel/Learn" to="." method="_on_learn_pressed"]
+[connection signal="pressed" from="GoalPanel/Review" to="." method="_on_review_pressed"]
+[connection signal="pressed" from="GoalPanel/Inspiration" to="." method="_on_inspiration_pressed"]
+[connection signal="pressed" from="GoalPanel/Mastery" to="." method="_on_mastery_pressed"]
+[connection signal="pressed" from="GoalPanel/Cram" to="." method="_on_cram_pressed"]
