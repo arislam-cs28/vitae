@@ -351,7 +351,7 @@ text = "- [i]Nature
 - PLOS Biology
 - Nature Communications
 - International Journal of Molecular Sciences
-- Sustainable"
+- Sustainable[/i]"
 
 [node name="Home" type="Button" parent="Journals" unique_id=1273240461]
 layout_mode = 0
@@ -398,28 +398,80 @@ theme_override_font_sizes/font_size = 75
 text = "Journals"
 horizontal_alignment = 1
 
-[node name="Miscellaneous" type="Panel" parent="." unique_id=388963356]
-visible = false
+[node name="Miscellaneous" type="Panel" parent="." unique_id=1786613596]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 88.0
+offset_top = 104.0
+offset_right = 1216.0
+offset_bottom = 728.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2jy27")
 
-[node name="Close" type="Button" parent="Miscellaneous" unique_id=1527008109]
+[node name="RichTextLabel" type="RichTextLabel" parent="Miscellaneous" unique_id=1743037108]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -516.0
+offset_top = -264.0
+offset_right = 460.0
+offset_bottom = 215.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 44
+theme_override_font_sizes/italics_font_size = 44
+bbcode_enabled = true
+text = "- [i]JSTOR[/i], an online database with thousands of articles
+- [i]PubMed[/i], home to 40 million+ datasets, journal articles, and literature reviews
+- [i]ScienceDirect[/i], the Elsevier database with millions more articles, textbooks, and journals
+- [i]iBiology[/i], with hundreds of free biology lectures"
+
+[node name="Home" type="Button" parent="Miscellaneous" unique_id=1715566544]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 313.0
+offset_top = 538.0
+offset_right = 769.0
+offset_bottom = 585.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_hover_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_fonts/font = ExtResource("3_81at1")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_avhyv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2s2c2")
+text = "Back to the study re-cell-ces!"
 script = ExtResource("4_5bh5e")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
 
-[node name="Label" type="Label" parent="Miscellaneous" unique_id=1192532867]
+[node name="Title" type="Panel" parent="Miscellaneous" unique_id=1838941926]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 24.0
+offset_left = 1176.0
+offset_top = 39.520233
+offset_right = 1721.2291
+offset_bottom = 159.52023
+rotation = 1.5707964
+theme_override_styles/panel = SubResource("StyleBoxFlat_wiy03")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Miscellaneous" unique_id=909760072]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Label" type="Label" parent="Miscellaneous/Title" unique_id=105992900]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -54.5
+offset_right = 178.0
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.1254902, 0.011764706, 0.30588236, 1)
+theme_override_font_sizes/font_size = 75
+text = "Miscellaneous"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
 [connection signal="pressed" from="TexButton" to="." method="_on_tex_button_pressed"]
@@ -427,3 +479,4 @@ offset_bottom = 40.0
 [connection signal="pressed" from="MiscButton" to="." method="_on_misc_button_pressed"]
 [connection signal="pressed" from="Textbooks/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="Journals/Home" to="." method="_on_jour_home_pressed"]
+[connection signal="pressed" from="Miscellaneous/Home" to="." method="_on_misc_home_pressed"]

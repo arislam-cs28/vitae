@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://culu1svux4rd3"]
+
+[ext_resource type="Script" uid="uid://o42t0qhp3ljj" path="res://general/quickstart.gd" id="1_4b8m8"]
+[ext_resource type="Theme" uid="uid://dy2ysrssjnvvb" path="res://reusables/options_buttons.tres" id="2_a7nwv"]
+[ext_resource type="FontFile" uid="uid://brv2bcvjlgye5" path="res://assets/fonts/Jost-Bold.ttf" id="3_87q6o"]
+[ext_resource type="Script" uid="uid://cag35g5h253s6" path="res://reusables/config_button.gd" id="4_342gq"]
+[ext_resource type="FontFile" uid="uid://dng1lpnkpuaxa" path="res://assets/fonts/Blobby.ttf" id="5_8jv5k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mi0vw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5gp0n"]
+bg_color = Color(0.8862745, 0.49019608, 0.5058824, 0.8039216)
+border_width_left = 5
+border_width_top = 10
+border_width_right = 5
+border_width_bottom = 10
+border_color = Color(0.53335476, 0.17156467, 0.18648344, 1)
+border_blend = true
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+corner_detail = 20
+shadow_color = Color(0.7313996, 0.45403743, 0.30067077, 0.5372549)
+shadow_size = 30
+
+[node name="QuickstartScreen" type="Node2D" unique_id=1958962644]
+script = ExtResource("1_4b8m8")
+
+[node name="Panel" type="Panel" parent="." unique_id=1275078389]
+offset_right = 1296.0
+offset_bottom = 800.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mi0vw")
+
+[node name="Panel2" type="Panel" parent="Panel" unique_id=346658965]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -326.0
+offset_top = -186.0
+offset_right = 326.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5gp0n")
+
+[node name="Label" type="Label" parent="Panel/Panel2" unique_id=864415000]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -203.0
+offset_top = 17.0
+offset_right = 203.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.5254902, 0.07058824, 0.17254902, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.6989028, 0.64730227, 0.78039217)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 26
+theme_override_font_sizes/font_size = 50
+text = "Quickstart Guide!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Panel2" unique_id=1468858950]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 95.0
+offset_right = -30.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="Button" parent="." unique_id=100141942]
+offset_left = 912.0
+offset_top = 192.0
+offset_right = 984.0
+offset_bottom = 264.0
+theme = ExtResource("2_a7nwv")
+theme_override_fonts/font = ExtResource("3_87q6o")
+text = "x"
+script = ExtResource("4_342gq")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Line2D" type="Line2D" parent="Close" unique_id=1284345247]
+points = PackedVector2Array(16, 16, 56, 56)
+
+[node name="Line2D2" type="Line2D" parent="Close" unique_id=924207404]
+points = PackedVector2Array(56, 16, 16, 56)
+
+[node name="Back" type="Button" parent="." unique_id=636555203]
+offset_left = 512.0
+offset_top = 528.0
+offset_right = 624.0
+offset_bottom = 576.0
+theme = ExtResource("2_a7nwv")
+theme_override_fonts/font = ExtResource("5_8jv5k")
+theme_override_font_sizes/font_size = 25
+text = "Back"
+script = ExtResource("4_342gq")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Next" type="Button" parent="." unique_id=124800281]
+offset_left = 672.0
+offset_top = 528.0
+offset_right = 784.0
+offset_bottom = 576.0
+theme = ExtResource("2_a7nwv")
+theme_override_fonts/font = ExtResource("5_8jv5k")
+theme_override_font_sizes/font_size = 25
+text = "Next"
+script = ExtResource("4_342gq")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

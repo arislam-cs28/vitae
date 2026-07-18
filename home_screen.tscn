@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dljisyo8udt74"]
 
 [ext_resource type="Script" uid="uid://d3cr3pvgjixy" path="res://home_screen.gd" id="1_ktig4"]
+[ext_resource type="PackedScene" uid="uid://jyg0mc2ob3hv" path="res://user/profile.tscn" id="2_7tdw8"]
 [ext_resource type="Texture2D" uid="uid://gwisdam6txp4" path="res://assets/art/backgrounds/home_bg.png" id="2_gf7oa"]
 [ext_resource type="Texture2D" uid="uid://d0a2aynx18u31" path="res://assets/art/buttons/home/profile_flat.png" id="3_whai3"]
 [ext_resource type="Texture2D" uid="uid://cuaduv0uwk0ik" path="res://assets/art/buttons/home/profile_hover.png" id="4_8sfkg"]
@@ -18,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://csh8go2d72kyc" path="res://assets/art/buttons/home/rec_flat.png" id="13_rai0l"]
 [ext_resource type="Texture2D" uid="uid://cjae8y3qyooeq" path="res://assets/art/buttons/home/rec_hover.png" id="14_7tdw8"]
 [ext_resource type="Theme" uid="uid://rbsph77s37we" path="res://reusables/gen_fonts.tres" id="16_rai0l"]
+[ext_resource type="PackedScene" uid="uid://culu1svux4rd3" path="res://general/quickstart_scn.tscn" id="20_fbpv5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktig4"]
 texture = ExtResource("2_gf7oa")
@@ -30,6 +32,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ktig4")
+
+[node name="Profile" parent="." unique_id=1610443149 instance=ExtResource("2_7tdw8")]
+layout_mode = 1
 
 [node name="Background" type="Panel" parent="." unique_id=1568890717]
 layout_mode = 0
@@ -106,15 +111,15 @@ metadata/_custom_type_script = "uid://cyn7x8j10nla2"
 
 [node name="Label" type="Label" parent="VirtualPet" unique_id=1766915964]
 layout_mode = 0
-offset_left = 110.0
+offset_left = 67.0
 offset_top = 56.0
-offset_right = 450.0
+offset_right = 466.0
 offset_bottom = 202.0
 theme_override_colors/font_color = Color(0.24533333, 0, 0.46, 0.87058824)
 theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 0.3882353)
 theme_override_constants/line_spacing = 0
 theme_override_font_sizes/font_size = 50
-text = "Catch Up With
+text = "Check Stats With
 Cat-alase!"
 horizontal_alignment = 1
 
@@ -143,31 +148,6 @@ theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 
 theme_override_font_sizes/font_size = 50
 text = "Options"
 
-[node name="Resources" type="TextureButton" parent="." unique_id=1745533384]
-layout_mode = 0
-offset_left = 416.0
-offset_top = 576.0
-offset_right = 808.0
-offset_bottom = 792.0
-texture_normal = ExtResource("13_rai0l")
-texture_pressed = ExtResource("13_rai0l")
-texture_hover = ExtResource("14_7tdw8")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("4_fm0op")
-metadata/_custom_type_script = "uid://cyn7x8j10nla2"
-
-[node name="Label" type="Label" parent="Resources" unique_id=567923804]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 72.0
-offset_right = 306.0
-offset_bottom = 145.0
-theme_override_colors/font_color = Color(0.24533333, 0, 0.46, 0.87058824)
-theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 0.3882353)
-theme_override_font_sizes/font_size = 50
-text = "Resources"
-
 [node name="Quickstart" type="TextureButton" parent="." unique_id=1745423749]
 layout_mode = 0
 offset_left = 808.0
@@ -193,6 +173,31 @@ theme_override_colors/font_color = Color(0.24533333, 0, 0.46, 0.87058824)
 theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 0.3882353)
 theme_override_font_sizes/font_size = 50
 text = "Quickstart Guide"
+
+[node name="Resources" type="TextureButton" parent="." unique_id=1745533384]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 576.0
+offset_right = 808.0
+offset_bottom = 792.0
+texture_normal = ExtResource("13_rai0l")
+texture_pressed = ExtResource("13_rai0l")
+texture_hover = ExtResource("14_7tdw8")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_fm0op")
+metadata/_custom_type_script = "uid://cyn7x8j10nla2"
+
+[node name="Label" type="Label" parent="Resources" unique_id=567923804]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 72.0
+offset_right = 306.0
+offset_bottom = 145.0
+theme_override_colors/font_color = Color(0.24533333, 0, 0.46, 0.87058824)
+theme_override_colors/font_shadow_color = Color(0.8628812, 0.6347956, 0.364093, 0.3882353)
+theme_override_font_sizes/font_size = 50
+text = "Resources"
 
 [node name="Bot" type="TextureButton" parent="." unique_id=1036161844]
 layout_mode = 0
@@ -240,9 +245,12 @@ Biologist!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="QuickstartScreen" parent="." unique_id=1958962644 instance=ExtResource("20_fbpv5")]
+
 [connection signal="pressed" from="User" to="." method="_on_user_pressed"]
 [connection signal="pressed" from="Study" to="." method="_on_study_pressed"]
 [connection signal="pressed" from="VirtualPet" to="." method="_on_virtual_pet_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Quickstart" to="." method="_on_quickstart_pressed"]
 [connection signal="pressed" from="Resources" to="." method="_on_resources_pressed"]
 [connection signal="pressed" from="Bot" to="." method="_on_bot_pressed"]

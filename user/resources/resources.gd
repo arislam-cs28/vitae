@@ -35,3 +35,7 @@ func _on_home_pressed() -> void:
 
 func _on_jour_home_pressed() -> void:
 	$Journals.hide()
+
+
+func _on_misc_home_pressed() -> void:
+	$Miscellaneous.hide()
