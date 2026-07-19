@@ -7,24 +7,10 @@
 [ext_resource type="Script" uid="uid://cag35g5h253s6" path="res://reusables/config_button.gd" id="3_uy74n"]
 [ext_resource type="FontFile" uid="uid://brv2bcvjlgye5" path="res://assets/fonts/Jost-Bold.ttf" id="4_tpjme"]
 [ext_resource type="FontFile" uid="uid://dng1lpnkpuaxa" path="res://assets/fonts/Blobby.ttf" id="7_hqhd1"]
+[ext_resource type="Theme" uid="uid://6qvbyni8xmue" path="res://reusables/vitae_boxes.tres" id="7_o48c2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28tly"]
 texture = ExtResource("1_7wc0h")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpe85"]
-bg_color = Color(0.16237755, 0, 0.49019608, 1)
-border_width_left = 5
-border_width_top = 2
-border_width_right = 5
-border_width_bottom = 2
-border_color = Color(1, 0.7137255, 0.7137255, 1)
-border_blend = true
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-shadow_color = Color(1, 0.6431373, 0.5882353, 0.5372549)
-shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o48c2"]
 bg_color = Color(0.15686275, 0, 0.6156863, 0.63529414)
@@ -45,21 +31,6 @@ corner_detail = 20
 shadow_color = Color(1, 1, 1, 0.6)
 shadow_size = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqhd1"]
-bg_color = Color(0, 0.22745098, 0.30588236, 0.69411767)
-border_width_left = 16
-border_width_top = 3
-border_width_right = 16
-border_width_bottom = 3
-border_color = Color(0.42352942, 0.8, 0.8, 1)
-border_blend = true
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-shadow_color = Color(0.13725491, 0.14901961, 0.32156864, 0.34117648)
-shadow_size = 100
-
 [node name="Bot" type="Control" unique_id=1829052597]
 layout_mode = 3
 anchors_preset = 15
@@ -77,25 +48,14 @@ offset_right = 1911.9999
 offset_bottom = 1192.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_28tly")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1297213444]
-layout_mode = 0
-offset_left = 16.0
-offset_top = -80.0
-offset_right = 624.0
-offset_bottom = 880.0
-texture = ExtResource("2_uy74n")
-expand_mode = 1
-
 [node name="LabAdvice" type="Button" parent="." unique_id=1422724115]
 layout_mode = 0
 offset_left = 584.0
 offset_top = 202.0
 offset_right = 1240.0
 offset_bottom = 306.0
-theme = ExtResource("3_3icpn")
+theme = ExtResource("7_o48c2")
 theme_override_fonts/font = ExtResource("4_tpjme")
-theme_override_font_sizes/font_size = 44
-theme_override_styles/normal = SubResource("StyleBoxFlat_jpe85")
 text = "Get Lab Advice!"
 script = ExtResource("3_uy74n")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
@@ -106,10 +66,8 @@ offset_left = 632.0
 offset_top = 375.0
 offset_right = 1240.0
 offset_bottom = 479.0
-theme = ExtResource("3_3icpn")
+theme = ExtResource("7_o48c2")
 theme_override_fonts/font = ExtResource("4_tpjme")
-theme_override_font_sizes/font_size = 44
-theme_override_styles/normal = SubResource("StyleBoxFlat_jpe85")
 text = "Get Study Advice!"
 script = ExtResource("3_uy74n")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
@@ -120,10 +78,8 @@ offset_left = 600.0
 offset_top = 547.0
 offset_right = 1240.0
 offset_bottom = 651.0
-theme = ExtResource("3_3icpn")
+theme = ExtResource("7_o48c2")
 theme_override_fonts/font = ExtResource("4_tpjme")
-theme_override_font_sizes/font_size = 44
-theme_override_styles/normal = SubResource("StyleBoxFlat_jpe85")
 text = "Ask What Dr. Vitae is Doing!"
 script = ExtResource("3_uy74n")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
@@ -170,44 +126,49 @@ script = ExtResource("3_uy74n")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
 
 [node name="Advice" type="Panel" parent="." unique_id=2052178931]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -324.0
-offset_top = -240.0
-offset_right = 324.0
-offset_bottom = 124.0
+offset_left = -66.0
+offset_top = -200.0
+offset_right = 590.0
+offset_bottom = 251.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_hqhd1")
+theme = ExtResource("7_o48c2")
 
 [node name="Label" type="Label" parent="Advice" unique_id=1141680521]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -462.5
-offset_top = 18.0
-offset_right = 462.5
-offset_bottom = 77.0
+offset_left = -328.0
+offset_top = 2.0
+offset_right = 328.0
+offset_bottom = 88.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
-text = "Vitae Says..."
+text = "Want wetlab work? Vitae says..."
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Leave" type="Button" parent="Advice" unique_id=1719345780]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 226.0
-offset_top = 97.0
-offset_right = 405.0
-offset_bottom = 149.0
-grow_vertical = 2
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -91.0
+offset_right = 91.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
 theme = ExtResource("3_3icpn")
 theme_override_fonts/font = ExtResource("4_tpjme")
 theme_override_font_sizes/font_size = 25
@@ -222,77 +183,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -235.5
-offset_top = -78.0
-offset_right = 235.5
-offset_bottom = 65.0
+offset_left = -272.0
+offset_top = -129.5
+offset_right = 272.0
+offset_bottom = 118.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 30
-text = "Don't explode your
-chemicals. I was kicked out of my PHd mentor's lab for that."
-
-[node name="Experiences" type="Panel" parent="." unique_id=431479588]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -324.0
-offset_top = -240.0
-offset_right = 324.0
-offset_bottom = 124.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_hqhd1")
-
-[node name="Label" type="Label" parent="Experiences" unique_id=1890233051]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -462.5
-offset_top = 18.0
-offset_right = 462.5
-offset_bottom = 77.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 40
-text = "Vitae Says..."
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
 horizontal_alignment = 1
-
-[node name="Go" type="Button" parent="Experiences" unique_id=484461154]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 226.0
-offset_top = 97.0
-offset_right = 405.0
-offset_bottom = 149.0
-grow_vertical = 2
-theme = ExtResource("3_3icpn")
-theme_override_fonts/font = ExtResource("4_tpjme")
-theme_override_font_sizes/font_size = 25
-text = "Got it.."
-script = ExtResource("3_uy74n")
-metadata/_custom_type_script = "uid://cag35g5h253s6"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Experiences" unique_id=1171224618]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -235.5
-offset_top = -78.0
-offset_right = 235.5
-offset_bottom = 65.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 30
-text = "Seriously, why are these fumes so toxic? My eyes are burning. You just can't see it."
+vertical_alignment = 1
 
 [node name="Study" type="Panel" parent="." unique_id=1713887037]
 visible = false
@@ -302,38 +203,42 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -324.0
-offset_top = -240.0
-offset_right = 324.0
-offset_bottom = 124.0
+offset_left = -66.0
+offset_top = -200.0
+offset_right = 590.0
+offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_hqhd1")
+theme = ExtResource("7_o48c2")
 
 [node name="Label" type="Label" parent="Study" unique_id=2098936399]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -462.5
-offset_top = 18.0
-offset_right = 462.5
-offset_bottom = 77.0
+offset_left = -328.0
+offset_top = 2.0
+offset_right = 328.0
+offset_bottom = 96.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
-text = "Vitae Says..."
+text = "Wanna Study? Vitae Says..."
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Away" type="Button" parent="Study" unique_id=865189264]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 226.0
-offset_top = 97.0
-offset_right = 405.0
-offset_bottom = 149.0
-grow_vertical = 2
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -88.0
+offset_right = 85.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
 theme = ExtResource("3_3icpn")
 theme_override_fonts/font = ExtResource("4_tpjme")
 theme_override_font_sizes/font_size = 25
@@ -348,19 +253,100 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -235.5
-offset_top = -98.0
-offset_right = 235.5
-offset_bottom = 102.0
+offset_left = -264.0
+offset_top = -132.0
+offset_right = 264.0
+offset_bottom = 116.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 30
-text = "Don't study for a test the night before. I got a 34 on one of mine. My PHd mentor told me to go... nevermind."
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Experiences" type="Panel" parent="." unique_id=431479588]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -200.0
+offset_right = 590.0
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_o48c2")
+
+[node name="Label" type="Label" parent="Experiences" unique_id=1890233051]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -462.5
+offset_top = 18.0
+offset_right = 462.5
+offset_bottom = 77.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "What's up with Vitae? Well..."
+horizontal_alignment = 1
+
+[node name="Go" type="Button" parent="Experiences" unique_id=484461154]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -95.0
+offset_right = 91.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_3icpn")
+theme_override_fonts/font = ExtResource("4_tpjme")
+theme_override_font_sizes/font_size = 25
+text = "Got it.."
+script = ExtResource("3_uy74n")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Experiences" unique_id=1171224618]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.0
+offset_top = -129.5
+offset_right = 276.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1297213444]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -104.0
+offset_right = 616.0
+offset_bottom = 880.0
+texture = ExtResource("2_uy74n")
+expand_mode = 1
 
 [connection signal="pressed" from="LabAdvice" to="." method="_on_lab_advice_pressed"]
 [connection signal="pressed" from="StudyMotivation" to="." method="_on_study_motivation_pressed"]
 [connection signal="pressed" from="VitaeExperiences" to="." method="_on_vitae_experiences_pressed"]
 [connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
 [connection signal="pressed" from="Advice/Leave" to="." method="_on_leave_pressed"]
-[connection signal="pressed" from="Experiences/Go" to="." method="_on_go_pressed"]
 [connection signal="pressed" from="Study/Away" to="." method="_on_away_pressed"]
+[connection signal="pressed" from="Experiences/Go" to="." method="_on_go_pressed"]

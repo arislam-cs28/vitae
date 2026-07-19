@@ -1,4 +1,4 @@
-# Vitae
+# Vitae's Laboratory
 A pocket level mini-app to study biology. And make it fun, in the process.
 
 # How to Play

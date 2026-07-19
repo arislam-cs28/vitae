@@ -24,25 +24,24 @@ func _ready() -> void:
 	current_text = instruct[0]
 	$Panel/Panel2/RichTextLabel.text = current_text
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+# closing the quickstart instructions
 func _on_close_pressed() -> void:
 	$Panel/Panel2/RichTextLabel.text = instruct[0]
 	current_text = instruct[0]
 	$".".hide()
-	
+
+# going back to the previous quickstart instruction
 func _on_back_pressed() -> void:
-	index -= 1
+	index -= 1 # subtracting from index, previous dialogue shown
 	if index < 0:
-		index = instruct.size()-1
+		index = instruct.size()-1 # going onto the last instruction if the back exceeds size
 	current_text = instruct[index]
 	$Panel/Panel2/RichTextLabel.text = current_text
 
+# going onto the next quickstart instruction
 func _on_next_pressed() -> void:
-	index += 1
+	index += 1 # adding to index, next dialogue shown
 	if index >= instruct.size():
-		index = 0
+		index = 0 # going back to the first instruction if the next button exceeds size
 	current_text = instruct[index]
 	$Panel/Panel2/RichTextLabel.text = current_text

@@ -1,6 +1,6 @@
 extends Button
 
-class_name NewButton
+class_name NewButton # creating a new class for all of this for simpler management
 
 @export var clicky: String = "yes"
 

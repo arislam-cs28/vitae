@@ -7,16 +7,11 @@ func _ready() -> void:
 	$Journals.hide()
 	$Miscellaneous.hide()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
+# returning to homescreen
 func _on_return_pressed() -> void:
 	get_tree().change_scene_to_file("res://home_screen.tscn")
 
-
+# showing each resource material based on if button is pressed
 func _on_tex_button_pressed() -> void:
 	$Textbooks.show()
 
@@ -29,6 +24,7 @@ func _on_misc_button_pressed() -> void:
 	$Miscellaneous.show()
 
 
+# hiding each resource material based on if back button is pressed
 func _on_home_pressed() -> void:
 	$Textbooks.hide()
 

@@ -52,6 +52,17 @@ offset_right = 1300.0
 offset_bottom = 800.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ktig4")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Background" unique_id=940868853]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 752.0
+offset_right = 272.0
+offset_bottom = 792.0
+theme_override_colors/default_color = Color(0.18039216, 0, 0.1882353, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+vertical_alignment = 1
+
 [node name="User" type="TextureButton" parent="." unique_id=1350914221]
 layout_mode = 0
 offset_left = 1064.0
