@@ -111,9 +111,9 @@ theme_override_font_sizes/font_size = 75
 text = "Cat-alase!"
 horizontal_alignment = 1
 
-[node name="Img2391" type="Sprite2D" parent="." unique_id=954671303]
-position = Vector2(600, 432)
-scale = Vector2(0.8630769, 0.85)
+[node name="Cat-alase" type="Sprite2D" parent="." unique_id=954671303]
+position = Vector2(600, 400)
+scale = Vector2(0.8986157, 0.8912501)
 texture = ExtResource("3_j6gt8")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=623032695]
@@ -123,7 +123,7 @@ offset_top = 208.0
 offset_right = 1088.0
 offset_bottom = 576.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/normal_font_size = 30
 text = "You are 100% super smart! 
 
 (yeah, that's your only stat)"
@@ -136,9 +136,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -138.0
-offset_top = -176.0
+offset_top = -155.0
 offset_right = 518.0
-offset_bottom = -129.0
+offset_bottom = -108.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)

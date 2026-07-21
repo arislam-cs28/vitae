@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bbrr8djiq0wmu" path="res://study/study.gd" id="1_ux780"]
 [ext_resource type="FontFile" uid="uid://dng1lpnkpuaxa" path="res://assets/fonts/Blobby.ttf" id="3_1kk1k"]
 [ext_resource type="Script" uid="uid://cag35g5h253s6" path="res://reusables/config_button.gd" id="4_iypu1"]
+[ext_resource type="Theme" uid="uid://tgq3bfta451e" path="res://reusables/study_buttons.tres" id="5_1kk1k"]
+[ext_resource type="PackedScene" uid="uid://rfna8cmcnt2c" path="res://study/flashcards.tscn" id="6_iypu1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5m22"]
 texture = ExtResource("1_0t4fc")
@@ -110,9 +112,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -211.0
-offset_top = -146.0
+offset_top = -148.0
 offset_right = 211.0
-offset_bottom = -99.0
+offset_bottom = -101.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -127,24 +129,43 @@ text = "Back (to the cell matrix)!"
 script = ExtResource("4_iypu1")
 metadata/_custom_type_script = "uid://cag35g5h253s6"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1474960748]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -376.0
-offset_top = -148.0
-offset_right = 376.0
-offset_bottom = 148.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 50
-text = "what are you doing here
+[node name="Basics" type="Button" parent="." unique_id=1456871283]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 192.0
+offset_right = 1136.0
+offset_bottom = 320.0
+theme = ExtResource("5_1kk1k")
+text = "Basics of Biology"
+script = ExtResource("4_iypu1")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
 
-GO BACK TO STUDYING BEFORE VITAE EXPLODES YOUR LAB!"
-horizontal_alignment = 1
+[node name="Molecules" type="Button" parent="." unique_id=338218640]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 496.0
+offset_right = 1136.0
+offset_bottom = 624.0
+theme = ExtResource("5_1kk1k")
+text = "Molecules"
+script = ExtResource("4_iypu1")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Organelles" type="Button" parent="." unique_id=2110218709]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 344.0
+offset_right = 1136.0
+offset_bottom = 472.0
+theme = ExtResource("5_1kk1k")
+text = "Organelles"
+script = ExtResource("4_iypu1")
+metadata/_custom_type_script = "uid://cag35g5h253s6"
+
+[node name="Flashcards" parent="." unique_id=1284470131 instance=ExtResource("6_iypu1")]
+visible = false
 
 [connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Basics" to="." method="_on_basics_pressed"]
+[connection signal="pressed" from="Molecules" to="." method="_on_molecules_pressed"]
+[connection signal="pressed" from="Organelles" to="." method="_on_organelles_pressed"]

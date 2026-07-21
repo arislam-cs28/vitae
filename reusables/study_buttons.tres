@@ -1,0 +1,40 @@
+[gd_resource type="Theme" format=3 uid="uid://tgq3bfta451e"]
+
+[ext_resource type="FontFile" uid="uid://brv2bcvjlgye5" path="res://assets/fonts/Jost-Bold.ttf" id="1_sdvi4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1gmu"]
+bg_color = Color(0.4410418, 0.38781253, 0.9125, 1)
+border_width_left = 10
+border_width_top = 15
+border_width_right = 10
+border_width_bottom = 15
+border_color = Color(0.21398446, 0, 0.41250002, 1)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(1, 0.603125, 0.603125, 0.5372549)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ablkb"]
+bg_color = Color(0.02888667, 0, 0.27187502, 1)
+border_width_left = 10
+border_width_top = 15
+border_width_right = 10
+border_width_bottom = 15
+border_color = Color(1, 0.7137255, 0.7137255, 1)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0.47812498, 0.7162305, 1, 0.5372549)
+shadow_size = 20
+
+[resource]
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 35
+Button/fonts/font = ExtResource("1_sdvi4")
+Button/styles/hover = SubResource("StyleBoxFlat_q1gmu")
+Button/styles/normal = SubResource("StyleBoxFlat_ablkb")
