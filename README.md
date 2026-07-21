@@ -21,8 +21,8 @@ The Link is here below:
 https://blueheart-elf.itch.io/dr-vitaes-laboratory
 
 # Credits
-Art - blueheart
-Code - blueheart
-Writing - blueheart
-Font - Google Fonts
-Music - blueheart (composed in Bandlab)
+- Art - blueheart
+- Code - blueheart
+- Writing - blueheart
+- Font - Google Fonts
+- Music - blueheart (composed in Bandlab)
